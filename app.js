@@ -1,6 +1,10 @@
 // Modules and require
-var stuff = require('./stuff');
+var events = require('events');
 
-console.log(stuff.counter(['shaun', 'crystal', 'ryu']));
-console.log(stuff.adder(1, 2));
-console.log(stuff.adder(stuff.pi, 5));
+var myEmmiter = new events.EventEmitter()
+
+myEmmiter.on('someEvent', function (msg) {
+    console.log(msg);
+})
+
+myEmmiter.emit('someEvent', 'the event was emitted')

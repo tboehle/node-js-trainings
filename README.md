@@ -44,4 +44,21 @@ Why is Node JS popular?
 * Modules and `require()`
   * Split code into logical modules
   * Code can use and refer to modules
-  * The export of `module.exports` is returned to `require(./somejs)`
+  * Node JS has some pre built modules like `var event = require('events')`
+  * The export of `module.exports` is returned to `var somejs = require('./somejs')`
+  * Three different ways:
+```JavaScript
+module.exports = {
+        counter: counter,
+        adder: adder,
+        pi: pi
+};
+```
+```JavaScript
+module.exports.pi = 3.142;
+```
+```JavaScript
+var pi = 3.142;
+module.exports.pi = pi;
+```
+* Event Emitter
