@@ -1,13 +1,19 @@
-// globals
-var time = 0;
+// normal function statement JavaScript
+function sayHi() {
+    console.log('Hi!');
+}
+sayHi()
 
-var timer = setInterval(function(){
-    time +=2;
-    console.log(time + ' seconds have passed')
-    if (time > 5) {
-        clearInterval(timer);
-    }
-}, 2000);
+// function expression (anonymous pattern)
+var sayBye = function() {
+    console.log('Bye!');
+}
 
-console.log(__dirname);
-console.log(__filename);
+sayBye();
+
+// function param is a functio
+function callFunction(fun) {
+    fun();
+}
+
+callFunction(sayBye)
