@@ -1,19 +1,4 @@
-// normal function statement JavaScript
-function sayHi() {
-    console.log('Hi!');
-}
-sayHi()
+// Modules and require
+var counter = require('./count');
 
-// function expression (anonymous pattern)
-var sayBye = function() {
-    console.log('Bye!');
-}
-
-sayBye();
-
-// function param is a functio
-function callFunction(fun) {
-    fun();
-}
-
-callFunction(sayBye)
+console.log(counter(['shaun', 'crystal', 'ryu']));

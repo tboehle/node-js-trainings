@@ -41,3 +41,7 @@ Why is Node JS popular?
   * anonymous function expressions
   * anonymous function expressions stored in a variable
   * Like in Go, you can pass a func type as param into a method
+* Modules and `require()`
+  * Split code into logical modules
+  * Code can use and refer to modules
+  * The export of `module.exports` is returned to `require(./somejs)`
