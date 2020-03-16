@@ -62,3 +62,7 @@ var pi = 3.142;
 module.exports.pi = pi;
 ```
 * Event emitter are emitting events for elements and can be inherited
+
+### Communication
+* Protocols: A set of communication rules, that two sides agree to use when communicating
+* Ports: A programm running on a computer can listen for requests sent to a particular port number
