@@ -31,7 +31,7 @@ Why is Node JS popular?
 
 ### How Node JS works
 
-* [global object](https://nodejs.org/dist/latest-v12.x/docs/api/globals.html) in Node JS gives access to some methods staright OOTB. You can use them anywhere in the node app
+* [global object](https://nodejs.org/dist/latest-v12.x/docs/api/globals.html) in Node JS gives access to some methods straight OOTB. You can use them anywhere in the node app
   * `console.log();`
   * `setTimeout(function(){}, 3000);`
   * `setInterval(function(){}, 3000);`
@@ -61,4 +61,4 @@ module.exports.pi = 3.142;
 var pi = 3.142;
 module.exports.pi = pi;
 ```
-* Event Emitter
+* Event emitter are emitting events for elements and can be inherited
