@@ -66,3 +66,18 @@ module.exports.pi = pi;
 ### Communication
 * Protocols: A set of communication rules, that two sides agree to use when communicating
 * Ports: A programm running on a computer can listen for requests sent to a particular port number
+
+### Streams and Buffers
+Comparison: Streaming a movie -> bufers and streams in action
+
+Buffers
+* Temporary storage spot for a chunk of data that is being transferred from one place to another
+* The buffer is filled with data, then passed along
+* Transfer small chunks of data at a time
+
+Streams
+* streams transfer data
+* increase performance
+* Writable streams - allow node js to write data to a stream
+* Readable streams - allow node js to read data from a stream
+* Duplex - can read and write toa stream

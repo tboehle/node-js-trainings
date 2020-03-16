@@ -1,5 +1,16 @@
 var http = require('http');
+var fs = require('fs');
 
+// will be parsed through buffer
+var myReadStream = fs.createReadStream(__dirname + '/readMe.txt', 'utf8');
+
+myReadStream.on('data', function (chunk) {
+    console.log('new chunk received:');
+    console.log(chunk);
+});
+
+
+/*
 var server = http.createServer(function(req, res){
     console.log('request was made: ' + req.url);
     res.writeHead(200, {'Content-Type': 'text/plain'});
@@ -12,3 +23,4 @@ console.log('yo dawgs, now listening to port 3000');
 module.exports = {
     server: server
 };
+*/
