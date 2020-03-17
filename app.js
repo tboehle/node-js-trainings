@@ -1,19 +1,12 @@
 var http = require('http');
 var fs = require('fs');
 
-// will be parsed through buffer
-var myReadStream = fs.createReadStream(__dirname + '/readMe.txt', 'utf8');
-var myWriteStream = fs.createWriteStream(__dirname + '/writeMe.txt')
-
-// listening to readStream and piping it to writeStream
-myReadStream.pipe(myWriteStream);
-
 
 var server = http.createServer(function(req, res){
     console.log('request was made: ' + req.url);
-    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.writeHead(200, {'Content-Type': 'text/html'});
     // data is parsed through buffer sequences
-    var myReadStream = fs.createReadStream(__dirname + '/readMe.txt', 'utf8');
+    var myReadStream = fs.createReadStream(__dirname + '/index.html', 'utf8');
 
     // listening to readStream (data) and piping it to response writable stream
     myReadStream.pipe(res);
