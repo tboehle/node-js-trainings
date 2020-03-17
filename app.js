@@ -4,14 +4,23 @@ var fs = require('fs');
 
 var server = http.createServer(function(req, res){
     console.log('request was made: ' + req.url);
-    res.writeHead(200, {'Content-Type': 'application/json'});
-    
-    var myObj = {
-        name: 'thorben',
-        job: 'Developer',
-        age: '23'
-    };
-    res.end(JSON.stringify(myObj));
+    if (req.url === '/home' || req.url === '/') {
+        res.writeHead(200, {'Content-Type': 'text/html'});
+        fs.createReadStream(__dirname + '/index.html', 'utf8').pipe(res);
+    }
+    else if (req.url === '/api') {
+        res.writeHead(200, {'Content-Type': 'application/json'});
+        var myObj = {
+            name: 'thorben',
+            job: 'Developer',
+            age: '23'
+        };
+        res.end(JSON.stringify(myObj));
+    }
+    else{
+        res.writeHead(404, {'Content-Type': 'text/plain'});
+        res.end('Not found, sorry')
+    }
 });
 
 server.listen(3000, '127.0.0.1');
