@@ -98,4 +98,9 @@ Streams
 
 ## NPM
 
-
+* `package.json` file is needed for specifying the dependencies
+  * Init `package.json` file with `npm init`
+  * Add dependencies with `npm install <some_dependency> -save`
+  * Install global dependencies: `npm install nodemon -g` (Recommended for dev tools)
+* package `express`: Webserver
+* package `nodemon`: Development tool, refresh the files on change
