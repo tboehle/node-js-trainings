@@ -62,6 +62,20 @@ var pi = 3.142;
 module.exports.pi = pi;
 ```
 * Event emitter are emitting events for elements and can be inherited
+* Scope, initialization, declaration and hoisting (initial default value)
+  * ``var``:
+    * function scoped
+    * undefined when accessing a variable before it's declared
+  * ``let``: 
+    * block scoped
+    * ReferenceError when accessing a variable before it's declared
+  * ``const``:
+    * block scoped
+    * ReferenceError when accessing a variable before it's declared
+    * can't be reassigned
+  * Conclusion:
+    * Most popular is to always use `const` unless you know the variable is going to change. With `const` one can signal that a variable shoudn't change
+    * The unpopular opinion, though it still has some validity: You should never use ``const`` because even though you’re trying to signal that the variable is immutable, as we saw above, that’s not entirely the case. Developers who subscribe to this opinion always use ``let`` unless they have variables that are actually constants like ``_LOCATION_ = ...``
 
 ### Communication
 * Protocols: A set of communication rules, that two sides agree to use when communicating
@@ -81,3 +95,7 @@ Streams
 * Writable streams - allow node js to write data to a stream
 * Readable streams - allow node js to read data from a stream
 * Duplex - can read and write toa stream
+
+## NPM
+
+
