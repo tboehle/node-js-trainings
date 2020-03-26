@@ -102,5 +102,16 @@ Streams
   * Init `package.json` file with `npm init`
   * Add dependencies with `npm install <some_dependency> -save`
   * Install global dependencies: `npm install nodemon -g` (Recommended for dev tools)
-* package `express`: Webserver
-* package `nodemon`: Development tool, refresh the files on change
+
+Package `nodemon`
+* Development tool, refresh the files on change
+
+Package `express`
+* Easy and flexible routing system
+* Integrates with many templating engines
+* Contains a middleware framework
+* Methods
+  * GET: `àpp.get('route', function);`
+  * POST: `àpp.post('route', function);`
+  * DELETE: `àpp.delete('route', function);`
+
