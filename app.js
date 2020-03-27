@@ -5,11 +5,11 @@ var app = express();
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res) {
-    res.render('index', {person: req.params.name});
+    res.render('index');
 });
 
 app.get('/contact', function(req, res) {
-    res.render('contact', {person: req.params.name});
+    res.render('contact');
 });
 
 app.get('/profile/:name', function(req, res) {
