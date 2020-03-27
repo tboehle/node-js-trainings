@@ -11,7 +11,8 @@ app.get('/', function(req, res) {
 });
 
 app.get('/contact', function(req, res) {
-    res.render('contact');
+    // prepopulate form fiels with query string parameters -> req.query
+    res.render('contact', {qs: req.query});
 });
 
 app.get('/profile/:name', function(req, res) {
