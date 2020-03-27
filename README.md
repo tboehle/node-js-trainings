@@ -115,3 +115,8 @@ Package `express`
   * POST: `àpp.post('route', function);`
   * DELETE: `àpp.delete('route', function);`
 
+### Templating
+
+Parse data to html files
+* Package ejs
+

@@ -1,20 +1,20 @@
 var express = require('express');
-var fs = require('fs');
-
 var app = express();
 
+// set ejs as default view engine, views is the default folder to look for ejs files
+app.set('view engine', 'ejs');
+
 app.get('/', function(req, res) {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    fs.createReadStream(__dirname + '/index.html').pipe(res);
+    res.render('index', {person: req.params.name});
 });
 
 app.get('/contact', function(req, res) {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    fs.createReadStream(__dirname + '/contact.html').pipe(res);
+    res.render('contact', {person: req.params.name});
 });
 
-app.get('/profile/:id', function(req, res) {
-    res.send('You requested a profile with the id of ' + req.params.id);
+app.get('/profile/:name', function(req, res) {
+    var data = {age: 29, job: 'Developer', hobbies: ['eating', 'fighting', 'fishing']};
+    res.render('profile', {person: req.params.name, data: data});
 });
 
 app.listen(3000);
