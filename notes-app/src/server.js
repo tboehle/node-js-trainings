@@ -6,6 +6,10 @@ const bodyParser = require('body-parser');
 // create express app
 const app = express();
 
+// mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served
+const cors = require('cors');
+app.use(cors())
+
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: false}));
 
